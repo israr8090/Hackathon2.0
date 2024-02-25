@@ -1,27 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" type="image" href="images/icon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Todo List</title>
-    <link rel="stylesheet" href="todo.css">
-</head>
-<body>
+    <title>Todo-List-(ISRAR)</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" /><body>
+    <!-- main container witch have input, output(display) and Updating Box -->
     <div class="container">
         <div class="todo-app">
-            <h2>To-Do List <img src="images/icon.png" alt="icon"></h2>
-            <div class="flex">
-                <input type="text" id="input-box" placeholder="Add your text">
-                <button id="enterkey" onclick="addTask()">Add</button>
+            <!-- this section only for taking Input and button for adding tasks -->
+            <div class="todo-inputs">
+                <!-- for showing title using h2 tag -->
+                <h2>TODO LIST <img src="images/icon.png" alt="lgo"></h2>
+
+                <!-- making div for appling flex styling -->
+                <div class="input-flex">
+                    <!-- input tag for taking values -->
+                    <input type="text" id="input-box" placeholder="Type your ToDos">
+
+                    <!-- button tag for when clicked store data in array and display in todo-outputs section -->
+                    <button id="enterkey" class="add-Btn" onclick="addTask()">ADD</button>
+                </div>
             </div>
-            <ul id="list-container">
-                <!-- <li class="checked">Task 1</li>
-                <li>Task 2</li>
-                <li>Task 3</li> -->
-            </ul>
+
+            <!-- this section only for display the output of task with some accessing buttons -->
+            <div class="todo-outputs">
+                <!-- using h3 tag for for showing heading in todo-outputs section at top and center -->
+                <h3>LIST OF TASKS</h3>
+
+                <!-- for showing empty message -->
+                <P class="message-tag">The list is empty</P>
+
+                <!-- ul with id for taking todos data from javaScript -->
+                <ul id="list-container">
+                    <!-- <li><span class="toggling">Task</span>
+                         <div class="todo-btn">
+                             <button class="checked" onclick='checkedTask(${i})'><i class="fa-solid fa-check color" ></i></button>
+                             <button class="edit" onclick='EditInfo(${i})'>EDIT</button>
+                             <button class="delete" onclick='DeleteInfo(${i})'>X</button>
+                         </div>
+                    </li> -->
+                </ul>
+            </div>
+
+            <!-- this section is open when user want to apply any editing of tasks -->
+            <div class="todo-update">
+                <!-- using h3 tag for showing heading of this div section(todo Editing section) -->
+                <h3>Edit Task:</h3>
+
+                <!-- creating input tag in div for apply flex property on input -->
+                <div class="task-editing">
+                    <input class="input-edit" type="text" autoselect>
+                </div>
+
+                <!-- this section for buttons of submit and cancel only -->
+                <div class="update-btn">
+                    <button onclick="updateSubmit()">SUBMIT</button>
+                    <button onclick="closeBox()">CANCEL</button>
+                </div>
+            </div>
         </div>
     </div>
-    
-  <script src="todoscript.js"></script>
+
+    <script src="main.js"></script>
 </body>
 </html>

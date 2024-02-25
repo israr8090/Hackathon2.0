@@ -1,0 +1,240 @@
+/* import font family from google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* removing default styling m, p, box-s, and font-f */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+/* appling  styling on container class and display flex for making chiled div in center */
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background: #f5f5f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* this is main div class for wraping all inner div section inside this */
+.todo-app {
+    width: 100%;
+    max-width: 60%;
+    border-radius: 5px;
+    box-shadow: 4px 4px 5px rgba(82, 82, 82, .4);
+}
+
+/* ////////////////(input section)////////////////////// */
+/* appling styling on first section of input and this class is main div for input and add button */
+.todo-inputs {
+    background-image: linear-gradient(340deg, #045de9 0%, #09c6f9 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px 10px 0 0;
+}
+
+/* this class in only of styling heading  */
+.todo-inputs h2 {
+    color: #ffffff;
+    font-size: 2rem;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* this only for styling img tag witch is along with h2 tag */
+.todo-inputs h2 img {
+    width: 50px;
+    margin-left: 5px;
+}
+
+/* appling styling on div class witch is parent of input tag and button also */
+.input-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 25px;
+    width: 90%;
+}
+
+/* appling CSS in input tag */
+.input-flex input {
+    border: none;
+    /* outline: none; */
+    background: white;
+    padding: 12px 15px;
+    border-radius: 5px;
+    width: 85%;
+}
+
+/* add CSS on add buton */
+.add-Btn {
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    background: #f5f5f5;
+    color: #000000;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* appling hover effect on add button */
+.add-Btn:hover {
+    color: #fff;
+    background-color: #4f525c;
+    transition: all 0.6s;
+}
+
+/* ////////////////(output section)////////////////////// */
+/* this is second section for showing display, appling styling on it */
+.todo-outputs {
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    border-radius: 0 0 10px 10px;
+    padding: 10px;
+    position: relative;
+}
+
+/* adding CSS on headign of ootputs section class */
+.todo-outputs h3 {
+    padding: 10px;
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* appling css on message-tag class */
+.message-tag {
+    color: #255785;
+    padding: 5px;
+    text-align: center;
+    font-size: 1rem;
+    font-family: "Roboto", sans-serif;
+}
+
+/* appling CSS on li of ul */
+ul li {
+    list-style: none;
+    font-size: 17px;
+    padding: 0px 15px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f5f5f5;
+    margin: 15px 0;
+}
+
+/* appling CSS on buttons of li */
+.todo-btn button {
+    background-color: transparent;
+    padding: 11px 8px;
+    border: none;
+}
+
+/* appling CSS of hover effect on buttons of li */
+.todo-btn button:hover {
+    background-color: #ddd;
+}
+
+/* ////////////////(Editing section)////////////////////// */
+/* adding styling on eding section of class */
+.todo-update {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+    position: absolute;
+    top: 360px;
+    width: 60%;
+    border-radius: 5px;
+    background-color: #4f525c;
+    display: none;
+}
+
+/* adding css on heading of editing section */
+.todo-update h3 {
+    padding: 10px;
+    color: #fff;
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+    font-size: 21px;
+}
+
+/* appling styling on div of class */
+.update-input {
+    width: 90%;
+}
+
+/* addign css of parent div class of input tag */
+.task-editing {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 15px 0;
+}
+
+/* adding css on input tag of .task-editing class  */
+.task-editing input {
+    border: none;
+    /* outline: none; */
+    background: white;
+    padding: 10px;
+    border-radius: 5px;
+    width: 85%;
+}
+
+/* adding css for parent div class of buttons */
+.update-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* margin: 15px 0; */
+}
+
+/* appling css on all buttons witch is in only editing section */
+.update-btn button {
+    margin: 10px;
+    padding: 10px 75px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+/* appling hover effect on edit section's buttons */
+.update-btn button:hover {
+    background-color: #0084ff;
+    color: #fff;
+    transition: all 0.6s;
+}
+
+/* appling css only for checked and edit button for color property */
+.color,
+.edit {
+    color: green;
+}
+
+/* appling css only for delete button for color property */
+.delete {
+    color: red;
+}
+
+/* appling css for toggling when clicked on checked button */
+.toggel-line-through {
+    text-decoration-line: line-through;
+    text-decoration-color: red;
+}
+
+/* ------------------------------------End---------------------------------------------- */
